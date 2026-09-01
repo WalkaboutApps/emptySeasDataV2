@@ -1,18 +1,23 @@
-# EmptyTheSeas — data
+# EmptyTheSeas — data (LEGACY)
+
+**Superseded. New packages are published to Cloudflare R2, not here.**
+
+The client streams from an R2 bucket; this repo was the GitHub Pages host until
+Pages' 1 GB site cap and metered bandwidth ruled it out for the national
+catalogue. The copy here is stale — it predates the MLLW vertical datum shift
+and the pre-contour smoothing, so its depths are NAVD88 and about a metre
+deeper than chart datum.
+
+Kept online because it costs nothing and the URL may still be referenced. Do not
+publish here.
 
 One of three repositories developed together and expected to be checked out as
-siblings in the same parent directory, so relative paths between them resolve:
+siblings in the same parent directory:
 
     <parent>/
       emptytheseas/           client   — the iOS app
-      emptyseasdatapipeline/  pipeline — builds what is published here
-      emptySeasDataV2/        data     — this repo
+      emptyseasdatapipeline/  pipeline — builds the packages
+      emptySeasDataV2/        data     — this repo, legacy
 
-Generated output, not source. Every file here is produced by
-`../emptyseasdatapipeline/bluetopo.py` and published by copying the resulting
-`<slug>.pmtiles` and `<slug>.meta.json` in and pushing; GitHub Pages serves them
-with range requests, which is how the client streams individual tiles. Do not
-hand-edit a package — rebuild it.
-
-Separate from the v1 `emptySeasData` repo, which the shipping v1 app still
+Separate again from the v1 `emptySeasData` repo, which the shipping v1 app still
 downloads from and which must be left untouched.
